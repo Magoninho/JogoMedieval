@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo Medieval</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body style="text-align: center; margin-top: 10%; background-image: url('https://i.pinimg.com/originals/b2/27/bc/b227bc858a11ee404975aa6761c78857.jpg');">
+
+    
+ 
+    <audio src="menu.mp3" id="theme" autoplay loop></audio>
+
+    <div id="aviso">
+        <h1>Esse jogo contém muito sangue, violência explícita, uso de drogas, violência explícita, armas medievais e violência explícita. Você deseja continuar? Você foi avisado...</h1>
+        <button class="myButton" onclick="document.getElementById('theme').play(); document.getElementById('menuprincipal').style.display = 'initial';document.getElementById('aviso').style.display = 'none';">SIM!</button><br><br><br>
+        <button class="myButton" onclick="window.close();">Sair</button>
+
+    </div>
+
+
+    <div id="menuprincipal" style="display: none;">
+            <font size="48"><h1 class="supertitle">JOGO MEDIEVAL (SEM NOME)</h1> </font>
+            <a href="jogo.html"><button class="myButton"><font size="48">Começar</font></button></a><br><br>
+            <a href="credits.html" target="_blank"><button class="myButton"><font size="5">Créditos</font></button></a><br><br>
+            <button class="myButton" onclick="window.close();">Sair</button>
+    </div>
+
+    <a href="https://magoninho.github.io/pages/MagoninhoGames.html" target="_blank"><img id="alogo" src="alogo.png" width="300px" /></a>
+
+</body>
+</html>

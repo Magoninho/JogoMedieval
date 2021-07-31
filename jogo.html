@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
+    <title>Jogo Medieval</title>
+</head>
+<body>
+
+    <!-- morte -->
+    <div id="morrest">
+        <br><br><br><br><br><br><br>
+        <h1 id="foof">Morreste</h1>
+        <button class="myButton" onclick="window.open('jogo.html', '_self')">recomeçar</button>
+        <button class="myButton" onclick="window.close()">sair</button>
+    </div>
+    <audio src="1.mp3" id="theme2" onended="document.getElementById('theme3').play();" autoplay ></audio>
+    <audio src="tema2.mp3" id="theme3" onended="document.getElementById('theme2').play();"></audio>
+
+    <!-- morte -->
+    <audio src="morte.mp3" id="mortetheme" loop></audio>
+    <script src="script.js"></script>
+    <div id="deixa" style="text-align: center;">
+        <!-- mensagem -->
+
+        <h1>
+            Olá, caro jogador. Seu objetivo é derrotar o lorde das trevas e restaurar a paz. Para isso, evolua seu nível, aprimore sua armadura, aumente sua força e busque espadas mais poderosas. <br>
+            O jogo será salvo automaticamente a cada <b>5 segundos</b> em sua máquina local. <br> Para voltar de onde você parou é só clicar no botão de carregar o jogo. Boa sorte.
+        </h1>
+
+        <button class="myButton" onclick="comecar(); saveauto(); tempos();">Entendido!</button>
+    </div>
+    <div id="gamearea" style="display: none;">
+        
+
+        
+
+        <!-- stats -->
+        <div class="d1">
+            <h1>&nbsp;Stats</h1>
+            <table>
+                <tr>
+                    <td>fome: </td>
+                    <td><progress id="fome" value="10" max="10"></progress></td>
+
+                    <!-- seu personagem -->
+                    
+                    <div style="float: right;">
+                        <p contenteditable>Monokai, o guerreiro:</p>
+                        <img src="vc.png" width="200"><h2 id="level">level: 1</h2>
+                    <img src="espada1.png" width="100"><p>Espada simples: <b>1 ATK</b></p>
+                    </div>
+                </tr>
+                <tr>
+                    <td>sede: </td>
+                    <td><progress id="sede" value="10" max="10"></progress></td>
+                </tr>
+                <tr style="color: green;">
+                    <td>dinheiro: </td>
+                    <td><h2> $0</h2></td>
+                </tr>
+                <tr style="color: #33A3C5;">
+                    <td>armadura: </td>
+                    <td><h2> 0 </h2></td>
+                </tr>
+                <tr style="color: #FFD000;">
+                    <td>força: </td>
+                    <td><h2> 0 </h2></td>
+                </tr>
+                <tr style="color: #5F4C01;">
+                    <td>Estoque de comida: </td>
+                    <td><h2 id="estoque"> 10KG </h2></td>
+                    <td><button style="font-size: 12pt" onclick="comer(1)">comer comida <br> do estoque</button></td>
+                </tr>
+                <tr style="color: #4400FF;">
+                    <td>Poço de água: </td>
+                    <td><h2 id="litros"> 10L </h2></td>
+                    <td><button style="font-size: 12pt" onclick="beber()">beber água <br> do seu poço</button></td>
+                </tr>
+            </table>
+            
+            <button class="myButton" id="loadbt" onclick="carregar();">Carregar jogo passado</button><br><br>
+            <button class="myButton" id="loadbt" onclick="window.open('index.html', '_self')">voltar ao menu principal</button>
+        </div>
+        <!-- mapa -->
+        <div class="d2">
+            <h1>&nbsp;Mapa</h1>
+            <!-- <button onclick="castbv();" style="background: url('castbv.jpg'); width: 180px; height: 100px; color: white;">castelo bem velho</button>
+            <button onclick="ruinas()" style="background: url('ruinas.jpg'); width: 120px; height: 80px; color: white;">ruínas</button>
+            <button onclick="fdf()" style="background: url('feiradafruta.jpg'); background-size: 100%; position:relative; top:110px; right: 240px; width: 120px; height: 80px; color: white;">feira da fruta</button>
+            <button onclick="reino()" style="border: hidden; background-color: transparent; position:relative; top:270px; right: 380px; width: 120px; height: 80px; color: white;">Reino Pika</button> -->
+            
+        </div>
+        <!-- opçoes -->
+        <div class="d3">
+
+
+            <!-- castelobv -->
+            <div id="castelo">
+                <button onclick="reifant()"> Rei Fantasma </button>
+                <button onclick="prisao()"> prisão abandonada </button>
+                <button class="x" onclick="fechar()">X</button>
+            </div>
+
+
+
+            <!-- ruinas -->
+            <div id="ruinas">
+                <h1>tu e gay mano</h1>
+                <button class="x" onclick="fechar()">X</button>
+            </div>
+            
+            
+        </div>
+
+        
+
+        
+        
+
+
+
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
